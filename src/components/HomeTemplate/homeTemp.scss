@@ -1,0 +1,110 @@
+@font-face {
+  font-family: Pony;
+  src: url(./../../assets/font/Pony.ttf);
+}
+
+.bookTicket {
+  background-image: url(./../../assets/bgmovie.jpg);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  font-family: Pony;
+  .selectChair {
+    .firstChair {
+      color: yellow;
+      font-size: 35px;
+      margin-right: 15px;
+      text-transform: uppercase;
+    }
+    .screen {
+      border-bottom: 50px solid rgb(255, 159, 95);
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      height: 100;
+      width: 80%;
+      // margin: 0 auto;
+      filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+      font-size: 25px;
+      color: #fff;
+    }
+    .ghe {
+      border: 3px solid orange;
+      width: 45px;
+      height: 35px;
+      font-size: 12px;
+      margin-left: 2%;
+      margin-bottom: 1%;
+      border-radius: 5px;
+      background-color: white;
+      color: black;
+    }
+  }
+  .bookedChair {
+    color: #fff;
+    .gheDuocChon {
+      border: 3px solid rgb(249, 154, 170);
+      margin-top: 0.5em;
+      background: orange;
+      color: #000;
+
+      cursor: auto;
+      border-radius: 5px;
+      width: 45px;
+      height: 35px;
+    }
+    .gheDangChon {
+      background: rgb(109, 238, 109);
+      border: 3px solid rgb(249, 154, 170);
+      color: #000;
+      margin-top: 0.5em;
+      cursor: auto;
+      border-radius: 5px;
+      width: 45px;
+      height: 35px;
+    }
+    .gheChuaChon {
+      background: #fff;
+      border: 3px solid rgb(249, 154, 170);
+      color: #000;
+      margin-top: 0.5em;
+      cursor: auto;
+      border-radius: 5px;
+      width: 45px;
+      height: 35px;
+    }
+    .tbTinhTien {
+      margin-top: 1em;
+      width: 100%;
+      border: 2px solid white;
+      thead {
+        tr {
+          th {
+            font-size: 30px;
+          }
+        }
+      }
+      tr {
+        td,
+        th {
+          border: 2px solid white;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+.bookTicket::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+}
