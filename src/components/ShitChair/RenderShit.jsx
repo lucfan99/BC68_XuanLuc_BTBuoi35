@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ArrayChair from "./ArrayChair";
 
 const RenderShit = () => {
+  const [chair, setChair] = useState(0);
   let arrChair = [
     {
       hang: "",
@@ -192,21 +193,27 @@ const RenderShit = () => {
     },
   ];
   // let [chair, setChair] = useState(0);
-
+  function getChair(chair) {
+    setChair(chair);
+  }
+  console.log(chair);
   return (
     <div className="chair text-xl text-white">
-      <div className="grid grid-cols-12 mt-5">
+      <div className="flex flex-col mt-5">
         {arrChair.map((hangGhe, index) => {
           // console.log(hangGhe);
-          return hangGhe.danhSachGhe.map((i, j) => {
-            // console.log(`${i.soGhe} + ${i.gia} + ${i.daDat}`);
+          // return hangGhe.danhSachGhe.map((i, j) => {
+          // console.log(`${i.soGhe} + ${i.gia} + ${i.daDat}`)
+          return (
+            <div key={index} className="flex flex-row w-full ml-20">
+              <button className="ghe-chu ">{hangGhe.hang}</button>
 
-            return (
-              <button key={j} className="ghe">
-                {i.soGhe}
-              </button>
-            );
-          });
+              <div className="w-full ">
+                <ArrayChair hangGhe={hangGhe} getChair={getChair} />
+              </div>
+            </div>
+          );
+          // });
         })}
       </div>
     </div>

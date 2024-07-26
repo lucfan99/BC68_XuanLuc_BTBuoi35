@@ -41,6 +41,50 @@
       background-color: white;
       color: black;
     }
+    .ghe-chu {
+      border: 3px solid transparent;
+      width: 45px;
+      height: 35px;
+      font-size: 12px;
+      margin-left: 2%;
+      margin-bottom: 1%;
+      border-radius: 5px;
+      background-color: transparent;
+      color: #ffff28;
+      font-size: x-large;
+    }
+    .gheDangChon {
+      background: rgb(109, 238, 109);
+      border: 3px solid rgb(249, 154, 170);
+      color: #000;
+      margin-top: 0.5em;
+      cursor: auto;
+      border-radius: 5px;
+      width: 45px;
+      height: 35px;
+    }
+    .gheDuocChon {
+      border: 3px solid rgb(249, 154, 170);
+      margin-top: 0.5em;
+      background: orange;
+      color: #000;
+
+      cursor: auto;
+      border-radius: 5px;
+      width: 45px;
+      height: 35px;
+    }
+    .rowNumber {
+      /* font-size: 25px; */
+      width: 45px;
+      height: 35px;
+      background: none;
+      border: none;
+      margin-left: 2%;
+      margin-bottom: 1%;
+      font-size: 30px;
+      color: yellow;
+    }
   }
   .bookedChair {
     color: #fff;
@@ -50,7 +94,7 @@
       background: orange;
       color: #000;
 
-      cursor: auto;
+      cursor: no-drop !important;
       border-radius: 5px;
       width: 45px;
       height: 35px;
