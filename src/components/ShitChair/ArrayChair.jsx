@@ -8,9 +8,8 @@ const ArrayChair = ({ hangGhe, getChair }) => {
   return (
     <div>
       {hangGhe.danhSachGhe.map((i, j) => {
-        let cssGheDaDat = "";
         //trạng thái đã đặt
-
+        let cssGheDaDat = "";
         if (i.daDat) {
           cssGheDaDat = "gheDuocChon";
         }
@@ -24,12 +23,13 @@ const ArrayChair = ({ hangGhe, getChair }) => {
             </button>
           );
         }
-        const indexGheDangChon =
+        let indexGheDangChon =
           arrChairBooking.findIndex((item) => {
             item.soGhe === i.soGhe;
           }) !== -1;
         if (indexGheDangChon) {
-          cssGheDaDat = "gheDangChon";
+          cssGheDangChon = "gheDangChon";
+          console.log(choose);
         }
         return (
           <button
