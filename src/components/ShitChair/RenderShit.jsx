@@ -3,7 +3,7 @@ import ArrayChair from "./ArrayChair";
 
 const RenderShit = () => {
   const [chair, setChair] = useState(0);
-  let arrChair = [
+  let [arrChair, setArrChair] = useState([
     {
       hang: "",
       danhSachGhe: [
@@ -191,7 +191,7 @@ const RenderShit = () => {
         { soGhe: "J12", gia: 75000, daDat: false },
       ],
     },
-  ];
+  ]);
   // let [chair, setChair] = useState(0);
   function getChair(chair) {
     setChair(chair);

@@ -4,10 +4,14 @@ import { uploadChair } from "../redux/bookingSlice";
 
 const ArrayChair = ({ hangGhe, getChair }) => {
   const dispatch = useDispatch();
+
   const { arrChairBooking } = useSelector((state) => state.bookingSlice);
   return (
     <div>
       {hangGhe.danhSachGhe.map((i, j) => {
+        console.log(i);
+        console.log(arrChairBooking);
+
         //trạng thái đã đặt
         let cssGheDaDat = "";
         if (i.daDat) {
@@ -25,11 +29,12 @@ const ArrayChair = ({ hangGhe, getChair }) => {
         }
         let indexGheDangChon =
           arrChairBooking.findIndex((item) => {
-            item.soGhe === i.soGhe;
+            return item.soGhe === i.soGhe;
           }) !== -1;
+        console.log(indexGheDangChon);
         if (indexGheDangChon) {
           cssGheDangChon = "gheDangChon";
-          console.log(choose);
+          console.log("choose");
         }
         return (
           <button
